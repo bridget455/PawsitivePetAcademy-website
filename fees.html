@@ -33,7 +33,7 @@
         <label for="name">Full name</label>
         <input type="text" id="name" placeholder="Sarah Smith" autocomplete="name">
         <label for="phone">Phone number</label>
-        <input type="tel" id="phone" placeholder="081 234 5678" autocomplete="tel">
+        <input type="tel" id="phone" placeholder="081 234 5678" autocomplete="tel" inputmode="numeric" maxlength="13" oninput="this.value.replace(/[^0-9]/g, '')">
         <label for="email">Email address</label>
         <input type="email" id="email" placeholder="name@example.com" autocomplete="email">
 

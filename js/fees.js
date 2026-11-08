@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
       error.textContent = 'Enter your name, phone number and email address.';
       return;
     }
+     if (!/^[0-9 ]{10,13}$/.test(phone) || phone.replace(/ /g, '').length !== 10) {
+      error.textContent = 'Enter a valid phone number: 10 digits, numbers only.';
+      return;
+    }
+    
     if (!/^\S+@\S+\.\S+$/.test(email)) {
       error.textContent = 'Enter a valid email address.';
       return;
